@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoriesTableViewCell" rowHeight="65" id="KGk-i7-Jjw" customClass="CategoriesTableViewCell" customModule="MyCityStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-Lw-f1M">
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Os-TB-6DP">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-qt-frh">
+                        <rect key="frame" x="374" y="16" width="40" height="32"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="FhM-Wq-zzz"/>
+                            <constraint firstAttribute="width" constant="40" id="O7x-rc-L15"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="folder" catalog="system"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pX9-Lw-f1M" secondAttribute="bottom" id="9RN-zI-eWj"/>
+                    <constraint firstItem="pX9-Lw-f1M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="UM0-NE-cjF"/>
+                    <constraint firstItem="2b6-qt-frh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="dGu-GM-bMK"/>
+                    <constraint firstAttribute="trailing" secondItem="2b6-qt-frh" secondAttribute="trailing" id="nPn-vN-nYX"/>
+                    <constraint firstItem="2b6-qt-frh" firstAttribute="leading" secondItem="pX9-Lw-f1M" secondAttribute="trailing" id="tIC-My-6Au"/>
+                    <constraint firstItem="pX9-Lw-f1M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wvy-Ff-XtA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryCollectionView" destination="pX9-Lw-f1M" id="tgT-qO-9GA"/>
+                <outlet property="viewMoreButton" destination="2b6-qt-frh" id="8c5-Xi-KK6"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="132.92410714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.90600001811981201" green="0.11400000005960464" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

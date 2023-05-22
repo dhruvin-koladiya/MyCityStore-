@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeliveryOptionTableViewCell" id="KGk-i7-Jjw" customClass="DeliveryOptionTableViewCell" customModule="MyCityStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-eI-rHi">
+                        <rect key="frame" x="14" y="8" width="386" height="45"/>
+                        <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <segments>
+                            <segment title="Pickup"/>
+                            <segment title="Delivery"/>
+                        </segments>
+                        <color key="selectedSegmentTintColor" name="PrimaryColor"/>
+                        <connections>
+                            <action selector="deliveryOptionSegmentTapped:" destination="KGk-i7-Jjw" eventType="valueChanged" id="50d-KP-u5M"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="S4B-eI-rHi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="UFJ-ge-dze"/>
+                    <constraint firstAttribute="trailing" secondItem="S4B-eI-rHi" secondAttribute="trailing" constant="14" id="eJw-aH-dKP"/>
+                    <constraint firstAttribute="bottom" secondItem="S4B-eI-rHi" secondAttribute="bottom" constant="8" id="uth-W9-dVR"/>
+                    <constraint firstItem="S4B-eI-rHi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="zr1-AB-wnM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deliveryOptionSegment" destination="S4B-eI-rHi" id="rjI-Sh-TGy"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="PrimaryColor">
+            <color red="0.90600001811981201" green="0.11400000005960464" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
